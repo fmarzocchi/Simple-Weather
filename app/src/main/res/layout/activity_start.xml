@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".StartActivity">
+
+    <ImageView
+        android:id="@+id/logoapp"
+        android:layout_width="67dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="90dp"
+        android:background="@drawable/logo_final"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleapp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="Simple Weather"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/logoapp"
+        app:layout_constraintStart_toEndOf="@+id/logoapp"
+        app:layout_constraintTop_toTopOf="@+id/logoapp" />
+
+    <ImageView
+        android:id="@+id/loadingImageview"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/errorMessageTextview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/errorMessageTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textStyle="bold"
+        android:layout_marginBottom="100dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReload"
+        app:layout_constraintEnd_toEndOf="@+id/buttonReload"
+        app:layout_constraintStart_toStartOf="@+id/buttonReload" />
+
+    <Button
+        android:id="@+id/buttonReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:padding="15dp"
+        android:backgroundTint="#C6C4C2"
+        android:elevation="6dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
